@@ -3,6 +3,9 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let context = canvas.getContext("2d");
 
+background();
+rects();
+
 function background() {
 	context.beginPath();
 	context.fillRect(50, 50, 300, 300);
@@ -21,6 +24,3 @@ function rects() {
 	context.fillRect(275, 225, 50, 50);
 	context.stroke();
 }
-
-background();
-rects();
