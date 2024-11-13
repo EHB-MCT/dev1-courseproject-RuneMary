@@ -17,7 +17,7 @@ function DrawLines() {
 	for (let i = 0; i < 100; i++) {
 		let x = Math.random() * width;
 		let y = Math.random() * height;
-		context.strokeStyle = "white";
+		context.strokeStyle = Utils.hsl(Utils.randomNumber(0, 360), 50, 50);
 		Utils.drawLine(x, y, width / 2, height / 2);
 		i++;
 		console.log(i);
