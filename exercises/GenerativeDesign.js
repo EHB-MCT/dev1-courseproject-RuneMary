@@ -14,7 +14,7 @@ function rect() {
 }
 
 function DrawLines() {
-	for (let i = 0; i < 100; i++) {
+	for (let i = 0; i < 1500; i++) {
 		let x = Math.random() * width;
 		let y = Math.random() * height;
 		context.strokeStyle = Utils.hsl(Utils.randomNumber(0, 360), 50, 50);
