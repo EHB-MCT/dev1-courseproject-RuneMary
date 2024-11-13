@@ -14,7 +14,7 @@ function rect() {
 }
 
 function DrawLines() {
-	for (let i = 0; i < 40; i++) {
+	for (let i = 0; i < 1500; i++) {
 		let x = Math.random() * width;
 		let y = Math.random() * height;
 
