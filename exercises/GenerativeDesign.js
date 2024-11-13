@@ -14,12 +14,26 @@ function rect() {
 }
 
 function DrawLines() {
-	for (let i = 0; i < 1500; i++) {
+	for (let i = 0; i < 1000; i++) {
 		let x = Math.random() * width;
 		let y = Math.random() * height;
-		context.strokeStyle = Utils.hsl(Utils.randomNumber(0, 360), 50, 50);
+
+		//let distance = Utils.calculateDistance(width / 2, height / 2, x, y);
+
+		//if (distance < 500) {
+		//	context.strokeStyle = Utils.hsl(Utils.randomNumber(0, 360), 50, 50);
+		//} else {
+		//	context.strokeStyle = "white";
+		//}
+
+		let distance = Utils.calculateDistance(width / 2, height / 2, x, y);
+
+		if (distance < 300) {
+			context.strokeStyle = "white";
+		} else {
+			context.strokeStyle = "red";
+		}
+
 		Utils.drawLine(x, y, width / 2, height / 2);
-		i++;
-		console.log(i);
 	}
 }
