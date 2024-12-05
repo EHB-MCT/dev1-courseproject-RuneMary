@@ -11,6 +11,7 @@ function rect() {
 	context.lineWidth = 2;
 	context.fillRect(0, 0, width, height);
 	DrawLines();
+	drawcircle();
 }
 
 function DrawLines() {
@@ -27,5 +28,12 @@ function DrawLines() {
 		}
 
 		Utils.drawLine(x, y, width / 2, height / 2);
+	}
+}
+
+function drawcircle(x = width / 2, y = height / 2) {
+	for (let i = 0; i < 20; i++) {
+		context.fillStyle = Utils.hsl(Utils.randomNumber(0, 360), 50, 50);
+		Utils.fillCircle(x, y, 50 - i * 2);
 	}
 }
