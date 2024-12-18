@@ -63,13 +63,13 @@ function draw(eventData) {
 function update() {
 	context.fillRect(0, 0, width, height);
 
-	/*	for (let j = 0; j < balls.length; j++) {
+	for (let j = 0; j < balls.length; j++) {
 		balls[j].y += Utils.randomNumber(-10, 0);
 		draw(balls[j]);
-	}*/
+	}
 	for (let i = 0; i < startLines.length; i++) {
 		draw(startLines[i]);
 	}
 
-	//requestAnimationFrame(update);
+	requestAnimationFrame(update);
 }
